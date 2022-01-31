@@ -1,5 +1,6 @@
 <?php 
 require_once __DIR__ . "/classes/Product.php";
+require_once __DIR__ . "/classes/Outlet.php";
 require_once __DIR__ . "/classes/Customer.php";
 
 //esempi di prodotti
@@ -23,6 +24,12 @@ var_dump($sabrina);
 
 $matteo = new Customer("Matteo", "Moro", "moro.mattero@gmail.com");
 var_dump($matteo);
+
+//esempio di prodotto outlet
+$outlet = new Outlet("Fiocchi di farro", "100% da agricoltura controllata. Senza coloranti, conservanti né altri additivi. Vegani. Fonte di fibra", "Fior di Loto", "500 gr", 5, true);
+
+$outlet->setDiscount();
+var_dump($outlet);
 ?>
 
 <!DOCTYPE html>
